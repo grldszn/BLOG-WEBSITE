@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precious Wairimu</title>
+  <link rel="icon" type="image/x-icon" href="https://ibb.co/2PsbJy4">
+  <link href="https://fonts.cdnfonts.com/css/kindegarten" rel="stylesheet">
+
+  <style>
+    /* Font face for custom font */
+    @font-face {
+      font-family: 'BlackFont';
+      src: url('black.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Kindegarten', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url(/image/beige.bg.jpeg) repeat-x center center fixed;
+      background-size: contain;
+      color: #000;
+      overflow: hidden;
+      cursor: url('https://i.ibb.co/DKD4RQZ/mouse-1.png'), auto;
+      position: relative;
+      padding-top: 65px;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    header {
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: transparent; 
+      z-index: 10;
+      transition: background-color 0.9s ease;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-left img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .blog-title {
+      font-family: 'BlackFont', sans-serif; /* Apply the custom font */
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 60px;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+      z-index: 20;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .hover-text {
+      width: 400px;
+      height: 100px;
+      text-decoration: none;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #000;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+      cursor: url('mouse 2.png'), pointer;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hover-text img {
+      margin-right: 10px;
+    }
+
+    .hover-text:hover {
+      transform: scale(1.05);
+      color: #FFF;
+      background-color: #c7ad8b
+    }
+
+    @media (max-width: 768px) {
+      .hover-text {
+        font-size: 2rem;
+        width: 300px;
+        height: 80px;
+      }
+    }
+
+    /* Cloud styling */
+    .cloud {
+      position: absolute;
+      background: url(/image/image.png) no-repeat;
+      background-size: contain;
+      z-index: 5;
+      opacity: 0.8;
+    }
+
+    /* Cloud sizes and positions */
+    .cloud-small {
+      width: 250px;
+      height: 120px;
+    }
+
+    .cloud-large {
+      width: 350px;
+      height: 180px;
+    }
+
+    /* Cloud animations */
+    @keyframes moveClouds {
+      from {
+        transform: translateX(-350px);
+      }
+      to {
+        transform: translateX(100vw);
+      }
+    }
+
+    /* Apply animation */
+    .cloud {
+      animation: moveClouds 30s linear infinite;
+    }
+
+    /* Faster cloud for variety */
+    .cloud-fast {
+      animation-duration: 20s;
+    }
+
+    /* Slower cloud for variety */
+    .cloud-slow {
+      animation-duration: 40s;
+    }
+
+    /* Adjust cloud positions and responsiveness */
+    @media (max-width: 768px) {
+      .cloud-small {
+        width: 140px;
+        height: 90px;
+      }
+      .cloud-large {
+        width: 200px;
+        height: 130px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header id="main-header">
+    <div class="header-left">
+      <img src="https://i.ibb.co/2PsbJy4/download.png" alt="Logo" class="logo">
+      <a href="#" class="blog-title">Precious Wairimu</a>
+    </div>
+  </header>
+
+  <!-- Clouds in the background -->
+  <div class="cloud cloud-small" style="top: 50px; left: -300px;"></div>
+  <div class="cloud cloud-large" style="top: 150px; left: 10%;"></div>
+  <div class="cloud cloud-small cloud-fast" style="top: 250px; left: 35%;"></div>
+  <div class="cloud cloud-large cloud-slow" style="top: 350px; left: 60%;"></div>
+  <div class="cloud cloud-small" style="top: 450px; left: 85%;"></div>
+  <div class="cloud cloud-small cloud-slow" style="top: 120px; left: -150px;"></div>
+  <div class="cloud cloud-large cloud-fast" style="top: 550px; left: 15%;"></div>
+
+  <!-- Spinning Sun -->
+  <div class="sun"></div>
+
+  <!-- Buttons Section -->
+  <div class="text-container" id="buttons-container">
+    <!-- Link to "Who's Precious" -->
+    <a href="home.html" class="hover-text">
+      <img src="https://i.ibb.co/WnbLFQD/download.png" alt="Icon" width="50" height="50">
+      I'm Precious
+    </a>
+
+    <!-- Link to "Contact Me" -->
+    <a href="contact.html" class="hover-text">
+      <img src="https://i.ibb.co/VSKGDbs/image-removebg-preview.png" alt="Icon" width="50" height="50">
+      Contact Me
+    </a>
+
+    <!-- Link to "Let's Gooo" -->
+    <a href="more.html" class="hover-text">
+      <img src="https://i.ibb.co/wKdKfLT/download.png" alt="Icon" width="40" height="40">
+      Let's Gooo
+    </a>
+  </div>
+
+  <script>
+    // JavaScript for button fade-out animation
+    document.querySelectorAll('.hover-text').forEach(button => {
+      button.addEventListener('click', () => {
+        document.getElementById('buttons-container').style.transition = 'opacity 1s';
+        document.getElementById('buttons-container').style.opacity = 0; 
+      });
+    });
+  </script>
+</body>
+</html>
